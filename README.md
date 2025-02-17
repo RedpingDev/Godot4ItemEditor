@@ -2,6 +2,11 @@
 
 A simple yet powerful resource editor tool for Godot 4, designed to help game designers create and manage resource (.tres) files without coding knowledge. This tool streamlines the workflow between designers and developers by providing a user-friendly interface for resource creation.
 
+## Screenshots
+
+### Main Editor Interface
+![Main Editor Interface](screenshots/main_editor.png)
+
 ## Features
 
 - Create, load, and manage game resource files (.tres)
