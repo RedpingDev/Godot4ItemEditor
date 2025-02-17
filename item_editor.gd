@@ -8,7 +8,7 @@ extends Control
 @onready var delete_button = $"./Panel/VBoxContainer/DeleteButton"
 @onready var file_dialog = $FileDialog
 
-const ItemResource = preload("res://addons/resource_maker/item_resource.gd")
+const ItemResource = preload("res://item_resource.gd")
 var current_action: String = ""  # 현재 수행할 동작을 저장할 변수
 
 func _on_save_button_pressed():
