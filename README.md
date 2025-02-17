@@ -18,9 +18,9 @@ A simple yet powerful resource editor tool for Godot 4, designed to help game de
 ## Installation
 
 1. Clone this repository:
-    ```bash
-    git clone https://github.com/[your-username]/godot-resource-editor
-    ```
+	```bash
+	git clone https://github.com/[your-username]/godot-resource-editor
+	```
 
 2. Open the project in Godot 4
 3. Run the editor scene
@@ -42,13 +42,11 @@ A simple yet powerful resource editor tool for Godot 4, designed to help game de
    - Confirm the deletion
 
 ## Project Structure
-├── scenes/
-│   └── main_editor.tscn
-├── scripts/
-│   ├── item_editor.gd
-│   └── item_resource.gd
-├── export_presets.cfg
-└── project.godot
+res/
+- ItemEditor.tscn
+- item_editor.gd
+- item_resource.gd
+- README.md
 
 ## Future Plans
 
