@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsl7o01coe4yq"]
+
+[ext_resource type="Script" path="res://item_editor.gd" id="1_bo57u"]
+
+[node name="ItemEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bo57u")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1000, 1000)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemImageRect" type="TextureRect" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SelectImageButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "이미지 선택"
+
+[node name="ItemNameInput" type="LineEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "아이템 이름"
+
+[node name="ItemDescriptionInput" type="TextEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "아이템 설명"
+
+[node name="ItemPowerInput" type="LineEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "파워"
+
+[node name="SaveButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Save"
+
+[node name="LoadButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Load"
+
+[node name="DeleteButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Delete"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+size = Vector2i(500, 500)
+
+[connection signal="pressed" from="Panel/VBoxContainer/SelectImageButton" to="." method="_on_select_image_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
