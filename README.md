@@ -5,7 +5,7 @@ A simple yet powerful resource editor tool for Godot 4, designed to help game de
 ## Screenshots
 
 ### Main Editor Interface
-![Main Editor Interface](screenshots/main_editor.png)
+![Main Editor Interface](screenshots/main_editor_v1.1.0.png)
 
 ## Features
 
